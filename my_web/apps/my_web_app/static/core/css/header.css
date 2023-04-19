@@ -1,0 +1,70 @@
+/****   Header   BebasNeue TrebuchetMS****/
+#header{
+    background-color: var(--color-3);
+    width: 90%;
+    height: 50px;
+
+    padding: 10px 5% 10px 5%;
+
+}
+
+/****   logo   ****/
+#logo_container{
+    background-color: var(--color-logo);
+    
+    display: block;
+    float: left;
+    
+    width: 13%;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0px 0px 3px black;
+    
+    margin-top: 3px;
+    padding: 7px 43px 7px 14px;
+    
+}
+#logo_icon{
+    font-size: 25px;
+    margin-right: 1.7px;
+}
+
+/****   logo-menu   ****/
+
+#logo_container *,
+#menu *{
+    color: white;
+    display: inline-block;
+}
+
+/****   menu   ****/
+#menu{
+    float: right;
+}
+
+#menu a{
+    
+    font-size: 25px;
+}
+
+#menu a{
+    font-family: '2';
+
+    margin: 0px 15px 0px 15px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 45px;
+}
+ 
+#menu ul li a{
+
+    text-decoration: none;
+    transition: all 200ms;
+}
+
+#menu ul li a:hover{
+
+    transform: scale(1.2, 1.2);
+
+}

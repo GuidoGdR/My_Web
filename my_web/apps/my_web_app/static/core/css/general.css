@@ -1,0 +1,96 @@
+/****   General   ****/
+
+*{
+    margin: 0px;
+    padding:  0px;
+    
+    font-family: "1";
+
+    color: var(--color-font);
+    letter-spacing: 1px;
+
+    text-shadow: var(--font-shadow);
+}
+
+body{
+    /*    bg plano o img?    */
+    background-color: var(--color-bg);
+    background-image: url("../img/bg/2.png");
+
+}
+
+#primary_content{
+    margin: 50px 5% 0px 5%;
+}
+
+.symbol{
+    font-family: 'symbols';
+    text-decoration: none;
+}
+/*   clear_block  */
+.clear-float{
+    float: none;
+    clear: both;
+}
+
+.box-1{
+
+    background-color: var(--color-transp-1);
+    backdrop-filter: blur( 10px );
+
+    border: 1px solid var(--color-2);
+    box-shadow: 1px 1px 3px var(--color-2), -1px -1px 5px var(--color-3);
+    
+
+}
+
+.box-2{
+    background-color: var(--color-transp-2);
+    backdrop-filter: blur( 2px );
+
+    border: 1px solid var(--color-2);
+    box-shadow: 1px 1px 3px var(--color-2), -1px -1px 5px var(--color-2);
+    
+}
+
+.box-3{
+
+    background-color: var(--color-transp-1);
+    backdrop-filter: blur( 2px );
+
+    border: 1px solid var(--color-font);
+    box-shadow: 1px 1px 3px var(--color-font), -1px -1px 5px var(--color-font);
+}
+
+/*------------------*/
+/* no implementados */
+.content-title{
+    text-align: center;
+
+    height: 40px;
+    width: 90%;
+
+    margin: 40px auto;
+
+    line-height: 40px;
+}
+
+/*   style-1-form  */
+.style-1-form input,
+.style-1-form select,
+.style-1-form textarea,
+.style-1-form button{
+    background-color: var(--color-transp-1);
+    backdrop-filter: blur( 10px );
+
+}
+/*   style-1-form hover */
+.style-1-form input:hover,
+.style-1-form select:hover,
+.style-1-form textarea:hover,
+.style-1-form button:hover{
+    border: 1px solid var(--color-2);
+    box-shadow: 1px 1px 3px var(--color-2), -1px -1px 5px var(--color-3);
+
+}
+
