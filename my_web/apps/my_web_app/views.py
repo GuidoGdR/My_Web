@@ -13,12 +13,12 @@ def home(request):
     max_len_content_resume=300
     
     try:
-        posts = Post.objects.filter( posted=True ).order_by( "-id" )[:5]
-        
+        #posts = Post.objects.filter( posted=True ).order_by( "-id" )[:5]
+
         tools = My_tool.objects.all()
         woroked_for = Woroked_for_enterprice.objects.all()
         
-        #Exceot ValueError inecesario: django resuelve solo
+        #Except ValueError inecesario: django resuelve solo
         """
         except ValueError:
             posts = Post.objects.filter( posted=True ).order_by( "id" )
@@ -31,17 +31,17 @@ def home(request):
         pass
     
     #config:
-    
+    """
     #   Posts
     if type(posts).__name__ == "Post":
         posts = [posts]
-        
     for post in posts:
         if post.content.__len__() > max_len_content_resume:
             post.content = post.content[ : max_len_content_resume ] + "..."
-
+    """
     contxt={
-        "posts": posts,
+
+        #"posts": posts,
         "my_tools": tools,
         "woroked_for": woroked_for
     }
