@@ -29,6 +29,19 @@
         
     </div>
 
+    <!--    serch box    -->
+    <div id="blog_browser" class="box-2">
+        <p id="browser_title">
+            Filtrar por:
+        </p>
+        
+        
+        <form class="style-1-form" action="" method="get">
+            {{ serch_blog_form }}
+            <button>Buscar</button>
+        </form>
+    </div>
+    
     <!--    blog box    -->
     <div id="blog" >
         
@@ -38,7 +51,7 @@
         
         {% if  posts %}
             {% for post in  posts %}
-        <!--    1    -->
+        <!--    Post    -->
         <section class="post box-2">
                 
             <div>
@@ -64,7 +77,7 @@
         
            {% endfor %}
 
-
+            <!--    Blog nav    -->
            <div id="blog_nav">
             
             {% if page_obj.has_previous %}
@@ -91,22 +104,11 @@
             </div>
         {% else %}
 
-        <p>Error al cargar los datos</p>
+        <p>No se encontraron Posts</p>
 
         {% endif %}
     </div>
 
-    <div id="blog_browser" class="box-2">
-        <p id="browser_title">
-            Filtrar por:
-        </p>
-        
-
-        <form class="style-1-form" action="" method="get">
-            {{ serch_blog_form }}
-            <button>Buscar</button>
-        </form>
-    </div>
     
     <div class="clear-float"></div>
         
