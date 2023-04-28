@@ -20,7 +20,7 @@ body{
 }
 
 #primary_content{
-    margin: 50px 5% 0px 5%;
+    margin: 50px var(--center-content) 0px var(--center-content);
 }
 
 .symbol{
