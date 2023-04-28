@@ -1,69 +1,78 @@
 /****   Header   BebasNeue TrebuchetMS****/
 #header{
+    color: white;
+
     background-color: var(--color-3);
-    width: 90%;
-    height: 50px;
+    height: 100px;
 
-    padding: 10px 5% 10px 5%;
+    display: flex;
 
+    align-items: center;
 }
 
 /****   logo   ****/
 #logo_container{
-    background-color: var(--color-logo);
-    
-    display: block;
-    float: left;
-    
-    width: 13%;
-    height: 30px;
+
     font-size: 20px;
-    text-align: center;
+    text-align: start;
     text-shadow: 0px 0px 3px black;
-    
-    margin-top: 3px;
-    padding: 7px 43px 7px 14px;
-    
+
+    flex-grow: 1;
+
+    margin-left: var(--center-content);
+
+}
+#logo_container a{
+    background-color: var(--color-logo);
+    padding: 10px 30px 10px 20px;
+
 }
 #logo_icon{
     font-size: 25px;
-    margin-right: 1.7px;
+    margin-right: 2px;
+}
+
+#logo_icon,
+#logo_text{
+    display: inline-block   ;
 }
 
 /****   logo-menu   ****/
 
-#logo_container *,
-#menu *{
-    color: white;
-    display: inline-block;
+#menu ul{
+    list-style: none;
+
+    display: flex;
+
+    gap: 20px;
+    justify-content: end;
 }
 
 /****   menu   ****/
 #menu{
-    float: right;
+    flex-grow: 1;
+    margin-right: var(--center-content);
 }
 
 #menu a{
-    
     font-size: 25px;
 }
 
 #menu a{
     font-family: '2';
-
-    margin: 0px 15px 0px 15px;
     font-weight: bold;
     font-size: 20px;
     line-height: 45px;
-}
- 
-#menu ul li a{
 
     text-decoration: none;
+    
+}
+ 
+#menu ul li{
     transition: all 200ms;
 }
 
-#menu ul li a:hover{
+#menu ul li:hover{
 
     transform: scale(1.2, 1.2);
 
