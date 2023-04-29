@@ -17,15 +17,22 @@ body{
     background-color: var(--color-bg);
     background-image: url("../img/bg/2.png");
 
-    min-height: 100vh;
-    display: grid;
 
-    grid-template-rows: auto 1fr auto ;
-
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 100vh;  
 }
 
 #primary_content{
     margin: 50px var(--center-content) 100px var(--center-content);
+    
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
 }
 
 .symbol{
@@ -44,7 +51,7 @@ body{
     backdrop-filter: blur( 10px );
 
     border: 1px solid var(--color-2);
-    box-shadow: 1px 1px 3px var(--color-2), -1px -1px 5px var(--color-3);
+    box-shadow: 1px 1px 3px var(--color-2), -1px -1px 5px var(--color-2);
     
 
 }
@@ -58,13 +65,13 @@ body{
     
 }
 
-.box-3{
+.box-1-2{
 
     background-color: var(--color-transp-1);
     backdrop-filter: blur( 2px );
 
-    border: 1px solid var(--color-font);
-    box-shadow: 1px 1px 3px var(--color-font), -1px -1px 5px var(--color-font);
+    border: 1px solid var(--shadow-color-2);
+    box-shadow: 1px 1px 3px var(--shadow-color-2), -1px -1px 5px var(--shadow-color-2);
 }
 
 /*------------------*/
@@ -89,13 +96,17 @@ body{
     backdrop-filter: blur( 10px );
 
 }
+.style-1-form button{
+    box-shadow: 1px -1px 2px var(--color-2), -1px -1px 2px var(--color-2);
+}
 /*   style-1-form hover */
 .style-1-form input:hover,
 .style-1-form select:hover,
 .style-1-form textarea:hover,
 .style-1-form button:hover{
-    border: 1px solid var(--color-2);
-    box-shadow: 1px 1px 3px var(--color-2), -1px -1px 5px var(--color-3);
+    border: 1px solid var(--hoover-forms-color);
+    
+    box-shadow: 1px 1px 3px var(--hoover-forms-color), -1px -1px 5px var(--hoover-forms-color);
 
 }
 

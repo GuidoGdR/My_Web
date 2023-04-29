@@ -10,9 +10,9 @@
     background-image: var(--img-banner) ;
     background-repeat: no-repeat;
     
-    border: 5px solid var(--color-3);
+    border: 5px solid var(--color-1);
     
-    box-shadow: 0px 1px 0px var(--color-3), 1px 2px 0px var(--color-3), 2px 3px 0px var(--color-3), 3px 4px 0px var(--color-3);
+    box-shadow: 0px 1px 0px var(--color-1), 1px 2px 0px var(--color-1), 2px 3px 0px var(--color-1), 3px 4px 0px var(--color-1);
 
     z-index: 1;
 }
@@ -92,6 +92,10 @@
 
     margin: 50px auto 50px auto;
     
+    display: flex;
+
+    flex-direction: column;
+    
 }
 
 /*    list title    */
@@ -109,7 +113,7 @@
 
 /*    list box    */
 .list{
-    height: 100%;
+
     width: 95%;
 
     margin: 0px auto;
@@ -118,10 +122,13 @@
     background-color: rgba(0, 0, 0, 0.2);
 
     overflow-x: scroll;
+
+    display: flex;
+    
+
+
 }
 .list div{
-
-    float: left;
 
     margin: 2% 0px 0px 9%;
 

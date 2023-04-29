@@ -1,19 +1,9 @@
 
 footer{    
-    background: linear-gradient(to top, var(--color-3) 33%, var(--color-3-0) 100%);
-
-    padding: 15px;
-
-    height: 100px;
-
-    box-shadow: 0px -20px 25px var(--color-3-0);
-
-    margin-top: auto;
+    background: linear-gradient(to top, var(--color-1) 33%, var(--color-1-0) 100%);
+    box-shadow: 0px -20px 25px var(--color-1-0);
     
-}
-
-footer *{
     letter-spacing: 1px;
+
+    height: 125px;
 }
-
-

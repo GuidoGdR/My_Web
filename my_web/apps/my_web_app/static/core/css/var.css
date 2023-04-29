@@ -16,7 +16,7 @@
 */
 :root {
     --img-banner: url("../img/banner.jpeg");
-    --img-2: url("../img/cyber_back_2.jpeg");
+    --img-2: url("../img/cyber_back_2.jpeg");/* desuso? */ 
     
     --color-bg:rgb(35, 40, 46);
     --color-logo: rgb(21, 72, 135);
@@ -27,14 +27,19 @@
     --color-ok: green;
     --color-fail: red;
 
-    --color-1:  rgb(2, 6, 41);
-    --color-2:  rgb(68, 87, 252);
-    --color-3: black;
-    --color-3-0: rgb(0, 0, 0, 0.9);
+    --bg-blog:  rgb(2, 6, 41);/* bg-blog */
+    
+    --hoover-forms-color: rgba(68, 252, 160, 0.5);/* border/shadow hoover-forms */
+    
+    --color-1: rgb(0, 0, 0);/* header/footer/border-solid */
+    --color-1-0: rgb(0, 0, 0, 0.9);/* footer-shadow */
 
-    --color-transp-1: rgb(255, 255, 255, 0.1);
-    --color-transp-2: rgba(0, 0, 0, 0.4); 
+    --color-2:  rgb(68, 87, 252);/* shadow-color */
+    --shadow-color-2:  rgb(255, 255, 255);/* return-blog-color */
 
-    --center-content: 100px;
+    --color-transp-1: rgb(255, 255, 255, 0.1);/* bg-transp-1 */ 
+    --color-transp-2: rgba(0, 0, 0, 0.4); /* bg-transp-2 */ 
+
+    --center-content: 5%;
 
 }
