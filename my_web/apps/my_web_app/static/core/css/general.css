@@ -17,10 +17,15 @@ body{
     background-color: var(--color-bg);
     background-image: url("../img/bg/2.png");
 
+    min-height: 100vh;
+    display: flex;
+    
+    flex-direction: column; 
+
 }
 
 #primary_content{
-    margin: 50px var(--center-content) 0px var(--center-content);
+    margin: 50px var(--center-content) 100px var(--center-content);
 }
 
 .symbol{
