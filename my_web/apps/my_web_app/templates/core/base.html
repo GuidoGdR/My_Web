@@ -22,6 +22,7 @@
 
     <!--    header    -->
     <link rel="stylesheet" type="text/css" href="{% static 'core/css/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/header_responsive.css' %}">
     
     <!--    footer    -->
     <link rel="stylesheet" type="text/css" href="{% static 'core/css/footer.css' %}">
@@ -37,7 +38,7 @@
 
     
     <!--    content    -->
-    <section id="primary_content">
+    <div id="primary_content">
         
         {% block content %}
         
@@ -48,7 +49,7 @@
         
         {% endblock content %}
     
-    </section>
+    </div>
 
     <!--    footer    -->
     {% include "core/footer.html" %}

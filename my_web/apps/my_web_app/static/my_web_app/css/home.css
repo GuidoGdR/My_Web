@@ -1,8 +1,14 @@
 
+/*    borrador    */
+img{
+    width: 100px;
+}
+
 /*    Banner    */
 #banner{
     
     position: relative;
+    z-index: 1;
 
     height: 100px;
     width: 100%;
@@ -14,131 +20,117 @@
     
     box-shadow: 0px 1px 0px var(--color-1), 1px 2px 0px var(--color-1), 2px 3px 0px var(--color-1), 3px 4px 0px var(--color-1);
 
-    z-index: 1;
-}
+    display: flex;
+    flex-direction: column;
 
-#banner *{
-    font-family: "1";
-}
+    flex-wrap: wrap;
 
-/*   title and sub    */
-#banner h1,
-#banner h2{
     
     text-align: center;
+    justify-content: center;
     
-    margin-top: 10px;
-    
+    font-family: "1";
 }
 
 /*    my-profile    */
 #my-profile{
-
-    height: 610px;
     width: 95%;
     
-    margin: 4px auto;
-
-    overflow: hidden;
 }
 
 #my-profile #resume_and_pic{
     display: flex;
-    gap: 20px;
-}
 
-/* mi foto */
-#my-pick{
-    
-    margin: 50px 0px 0px 8%;
-    
-    height: 150px;
-    width: 150px;
-
-    border: 5px solid black;
-    border-radius: 100px;
-
-    overflow: hidden;
-}
-#my-pick img{
-    height: 200px;
+    justify-content: center;
 }
 
 /*    Profile resume    */
-#profile-resume{
-
-    background-color: rgba(0, 0, 0, 0.2);
+#resume_and_pic #profile-resume{
     
+    flex-grow: 1;
+    
+    background-color: var(--color-transp-2);
+
     width: 65%;
     height: 200px;
 
-    display: block;
-    float: right;
-
-    margin: 30px 5% 0px 0px;
+    margin: 30px 20px 0px 0px;
 
     overflow-y: scroll;
-}
-#profile-resume p{
+
     font-size: 17px;
-    text-align: center;
-    margin: 20px auto;
+    text-align: left;
+    padding: 10px;
+}
+
+/* mi foto */
+#resume_and_pic #my-pick{
+
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left:20px;
+    margin-right: 20px;
+}
+#my-pick img{
+
+    height: 150px;
+    width: 150px;
+    
+    border: 5px solid black;
+    border-radius: 100px;
 }
 
 /*    list box    */
 .list-box{
-    height: 110px;
     width: 90%;
 
     margin: 50px auto 50px auto;
-    
-    display: flex;
 
+    display: flex;
     flex-direction: column;
-    
+
+    align-items: center;
 }
 
 /*    list title    */
 .list-title{
-    height: 35px;
     width: 100%;
 
+    padding: 5px;
     text-align: left;
-
-    line-height: 35px;
-
     font-size: 20px;
-    
-}
 
+}
 /*    list box    */
 .list{
 
-    width: 95%;
+    position: relative;
+    width: 90%;
 
-    margin: 0px auto;
-    
-    
     background-color: rgba(0, 0, 0, 0.2);
 
     overflow-x: scroll;
 
     display: flex;
-    
 
-
+    align-items: center;
 }
-.list div{
 
-    margin: 2% 0px 0px 9%;
+.item{
+
+    float: left;
+    margin: 10px;
 
     text-align: center;
 
 }
 
-.list div img{
-    height: 60px;
-}
 
-/*    button    */
-/* boton para ampliar la extencion del banner*/
+#dark:focus{
+
+    background-image: none;
+}

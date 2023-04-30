@@ -18,7 +18,7 @@
     --img-banner: url("../img/banner.jpeg");
     --img-2: url("../img/cyber_back_2.jpeg");/* desuso? */ 
     
-    --color-bg:rgb(35, 40, 46);
+    --color-bg:rgba(20, 65, 121, 0.295);
     --color-logo: rgb(21, 72, 135);
     
     --color-font: white;
