@@ -8,26 +8,70 @@
     background-image: var(--img-banner) ;
     background-repeat: no-repeat;
     
-    border: 5px solid var(--color-3);
+    border: 5px solid var(--color-1);
     
-    box-shadow: 0px 1px 0px var(--color-3), 1px 2px 0px var(--color-3), 2px 3px 0px var(--color-3), 3px 4px 0px var(--color-3);
-    
+    box-shadow: 0px 1px 0px var(--color-1), 1px 2px 0px var(--color-1), 2px 3px 0px var(--color-1), 3px 4px 0px var(--color-1);
 }
 
-#banner *{
-    font-family: "1";
-}
 
 /*   banner title    */
+#banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #banner h1{
-    
-    text-align: center;
-    
-    margin-top: 25px;
-    
     letter-spacing: 4px;
-
     font-size: 40px;
+    font-family: "1";
+    
+}
+
+#wraper{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+
+/*---------------------*/
+/*    Browser/aside    */
+
+#blog_browser{
+    margin-left: 2%;
+    padding: 10px;
+
+    flex-grow: 1;
+    flex-basis: 70%;
+    order: 2;
+
+}
+
+#browser_title{
+    text-align: center;
+    margin: 5px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#id_title,
+#id_topics,
+#id_topics option{
+    color: var(--color-font);
+
+    margin: 5px;
+    
+    width: 90%;
+
+}
+
+#blog_browser button{
+    background-color: var(--color-1);
+    display: block;
+    margin: 10px auto;
+    
+    padding: 10px;
     
 }
 
@@ -35,65 +79,55 @@
 /*-----------------*/
 /*    blog box    */
 #blog{
+    order: 1;
+    flex-grow: 1;
     
-    background-color: var(--color-1);
+    background-color: var(--bg-blog);
     
-    margin: 40px 0px;
-
-    width: 70%;
-    
-    float: left;
-    
-    border: 1px solid var(--color-3);
-    box-shadow: 0px 1px 0px var(--color-3), 1px 2px 0px var(--color-3), 2px 3px 0px var(--color-3), 3px 4px 0px var(--color-3),
-    0px -1px 0px var(--color-3), -1px -2px 0px var(--color-3), -2px -3px 0px var(--color-3), -3px -4px 0px var(--color-3);
+    border: 1px solid var(--color-1);
+    box-shadow: 0px 1px 0px var(--color-1), 1px 2px 0px var(--color-1), 2px 3px 0px var(--color-1), 3px 4px 0px var(--color-1),
+    0px -1px 0px var(--color-1), -1px -2px 0px var(--color-1), -2px -3px 0px var(--color-1), -3px -4px 0px var(--color-1);
     
 }
 
-/*    posts of blog    
-#020629
-*/
+/*    posts of blog    */
 
 .post{
     width: 90%;
     margin: 30px auto;
-}
+    padding: 10px;
 
+    display: flex;
+    flex-direction: column;
+}
 
 /*    title    */
 .post h3{
-    text-align: center;
+    text-align: left;
     margin-top: 25px;
     
     letter-spacing: 1px;
 }
 
 /*    date and category    */
-.post > div{
-    float: right;
-    font-size: 15px;
+.post .date_and_category{
     
+    margin-left: auto;
+
+    padding: 10px;
     border: 1px solid var(--color-2);
     border-top: none;
     border-right: none;
-    
-}
-.post > span{
-    margin: 10px 5px 0px 0px;
-    padding: 0px 0px 5px 5px;
-    
+
+
     font-size: small;
-    
 }
 
 /*    content of fost    */
 .post_content{
+    margin: 20px 10px 15px 10px;
+}
 
-    margin: 10px 10px 15px 10px;
-}
-.post_content *{
-    display: inline;
-}
 /*---------------*/
 /*    next and previous page    */
 #blog_nav{
@@ -101,6 +135,9 @@
 
     height: 50px;
     width: 100%;
+
+    display: flex;
+
 }
 
 #blog_nav a{
@@ -113,22 +150,28 @@
 }
 /*    prev pag    */
 #prev_pag{
-    display: block;
-    float: left;
+    flex-grow: 1;
+    margin-left: 20px;
 }
 /*    next pag    */
 #next_pag{
-    float: right;
+    flex-grow: 1;
+    text-align: end;
+    margin-right: 20px;
 }
 
 /*    all pages    */
 #all_pages{
+    flex-grow: 1;
 
-    float: left;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
 
     max-width: 80%;
 
-    margin: 0px 0px 0px 7%;
+    margin: 0px auto ;
 
     text-align: center;
 }
@@ -138,44 +181,3 @@
     text-decoration: none;
     margin: 5px;
 }
-
-/*---------------*/
-/*    Browser    */
-
-#blog_browser{
-    width: 25%;
-
-    margin: 300px 2%;
-    float: right;
-    
-}
-#browser_title{
-    text-align: center;
-    margin: 5px;
-
-    font-size: 20px;
-    font-weight: bold;
-}
-#blog_browser p{
-    margin-top: 10px;
-    margin-left: 15px;
-}
-#id_title,
-#id_topics,
-#id_topics option{
-    color: var(--color-font);
-
-    margin: 2px;
-
-}
-
-#blog_browser button{
-    background-color: black;
-    display: block;
-    margin: 10px auto;
-    
-    border: 10px solid black;
-
-    box-shadow: 1px -1px 2px var(--color-2), -1px -1px 2px var(--color-2);
-}
-

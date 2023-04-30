@@ -2,21 +2,23 @@
 /*    Banner (Post title)    */
 #banner{
     
-    height: 100px;
+    height: 150px;
     width: 99%;
     
     background-image: var(--img-banner) ;
     background-repeat: no-repeat;
     
-    border: 5px solid var(--color-3);
+    border: 5px solid var(--color-1);
     
-    box-shadow: 0px 1px 0px var(--color-3), 1px 2px 0px var(--color-3), 2px 3px 0px var(--color-3), 3px 4px 0px var(--color-3);
+    box-shadow: 0px 1px 0px var(--color-1), 1px 2px 0px var(--color-1), 2px 3px 0px var(--color-1), 3px 4px 0px var(--color-1);
     
+    font-family: "1";
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#banner *{
-    font-family: "1";
-}
 
 /*   banner title    */
 #banner h1{
@@ -33,7 +35,7 @@
 
 #post{
     
-    background-color: var(--color-1);
+    background-color: var(--bg-blog);
     
     margin: 40px auto;
 
@@ -41,15 +43,18 @@
     
     min-height: 200px;
     
-    border: 1px solid var(--color-3);
-    box-shadow: 0px 1px 0px var(--color-3), 1px 2px 0px var(--color-3), 2px 3px 0px var(--color-3), 3px 4px 0px var(--color-3),
-    0px -1px 0px var(--color-3), -1px -2px 0px var(--color-3), -2px -3px 0px var(--color-3), -3px -4px 0px var(--color-3);
+    border: 1px solid var(--color-1);
+    box-shadow: 0px 1px 0px var(--color-1), 1px 2px 0px var(--color-1), 2px 3px 0px var(--color-1), 3px 4px 0px var(--color-1),
+    0px -1px 0px var(--color-1), -1px -2px 0px var(--color-1), -2px -3px 0px var(--color-1), -3px -4px 0px var(--color-1);
     
 }
-
+#date_and_category{
+    display: flex;
+    flex-wrap: wrap;
+}
 #post_topics{
     margin: 20px;
-    padding: 5px;
+    padding: 10px;
 
     font-size: 14px;
     
@@ -69,7 +74,7 @@
     text-align: center;
 
     margin: 20px;
-    padding: 5px;
+    padding: 10px;
 
     font-size: 14px;
 }
