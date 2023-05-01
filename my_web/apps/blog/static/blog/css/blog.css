@@ -67,7 +67,6 @@
 }
 
 #blog_browser button{
-    background-color: var(--color-1);
     display: block;
     margin: 10px auto;
     

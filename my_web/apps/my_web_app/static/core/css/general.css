@@ -95,9 +95,12 @@ body{
     background-color: var(--color-transp-1);
     backdrop-filter: blur( 10px );
 
+    border: 1px solid var(--border-forms-color);
+
 }
 .style-1-form button{
-    box-shadow: 1px -1px 2px var(--color-2), -1px -1px 2px var(--color-2);
+    box-shadow: 1px 1px 2px var(--color-2), -1px -1px 2px var(--color-2);
+    background-color: var(--color-1);
 }
 /*   style-1-form hover */
 .style-1-form input:hover,

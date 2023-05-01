@@ -2,15 +2,18 @@
 /*    Banner    */
 #banner{
     
+    position: relative;
+    z-index: 1;
+
     height: 100px;
     width: 99%;
     
     background-image: var(--img-banner) ;
     background-repeat: no-repeat;
     
-    border: 5px solid var(--color-3);
+    border: 5px solid var(--color-1);
     
-    box-shadow: 0px 1px 0px var(--color-3), 1px 2px 0px var(--color-3), 2px 3px 0px var(--color-3), 3px 4px 0px var(--color-3);
+    box-shadow: 0px 1px 0px var(--color-1), 1px 2px 0px var(--color-1), 2px 3px 0px var(--color-1), 3px 4px 0px var(--color-1);
     
 }
 
@@ -33,7 +36,8 @@
 
 /*   contact form    */
 #contact_form_container{
-    margin: 15px 15px 40px 15px;
+    padding: 20px;
+    width: 80%;
 }
 #id_contact_mail{
     height: 15px;
