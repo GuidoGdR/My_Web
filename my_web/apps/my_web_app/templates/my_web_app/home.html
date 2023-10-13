@@ -1,0 +1,122 @@
+{% extends 'core/base.html' %}
+    {% load static %}
+
+
+
+    {% block title %}Home{% endblock title %}
+
+
+    {% block css %}
+
+    <!--    home    -->
+    <link rel="stylesheet" type="text/css" href="{% static 'my_web_app/css/home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'my_web_app/css/home_responsive.css' %}">
+    
+    {% endblock css %}
+
+
+    {% block content %}
+    
+    <!--    banner    -->
+    <div id="banner">
+
+        <!--
+        <img class="cyber-back" src="{% static 'my_web_app/img/cyber_back.jpeg' %}"/>
+        <img id="my_pick" src="{% static 'my_web_app/img/my_pick.jpeg' %}" />
+        -->
+
+        <h1>Guido do Rego</h1>
+        
+        <h2>Programador Full-Stack</h2>
+        
+        
+        
+    </div>
+    
+    
+    <div class="box-2" id="my-profile">
+        
+        <section id="resume_and_pic">
+
+            <div id="my-pick">
+                <img src="{% static 'my_web_app/img/my_pic.png' %}" alt="Guido do Rego"/>
+            </div>
+
+            <article id="profile-resume" class="scrollbar-1-y">
+                <p>
+                    Lorem ipsum dolor sit amet. Est voluptatem eaque ut expedita pariatur et quia ipsum ex deleniti tempore. Qui quasi magnam ad error voluptatem et dolores possimus sed officiis quaerat sed impedit magni?
+
+    Et nesciunt veritatis ut galisum explicabo ut voluptas aspernatur et beatae aperiam. Et dolor nisi et aliquid aperiam vel aliquam deleniti ut internos natus qui minus voluptas eum dolorem voluptatem aut natus dicta! Aut ducimus ducimus qui tenetur corporis et aliquid pariatur hic necessitatibus aspernatur?
+
+    33 natus commodi est consequatur dolores et quia voluptas. Qui cupiditate reprehenderit est error veritatis ab dicta adipisci aut illum molestiae. Sed perferendis perspiciatis quo omnis adipisci aut suscipit amet ea quae vitae in incidunt veritatis et suscipit dolor. Et amet earum qui voluptatem enim eos mollitia dolor.
+                </p>
+            </article>
+
+        </section>
+
+        <!--    tools list    -->
+        <section class="list-box">
+
+            <div class="list-title box-2">
+                <h4>Herramientas:</h4>
+            </div>
+
+            {% if my_tools %}
+            
+
+            <div class="list scrollbar-1-x">
+                {% for tool in my_tools %}
+                <div class="item">
+                    <img src="{{tool.logo.url}}" alt="logo {{tool.name}}"/>
+                    <p>
+                        {{tool.name}}
+                    </p>
+                </div>
+                
+                {% endfor %}
+
+            </div>
+            {% else %}
+            <div class="list" >
+                <div>
+                    <p>
+                        Error al cargar listado de lenguajes
+                    </p>
+                </div>
+
+            </div>
+            {% endif %}
+        </section>
+
+        <!--    Enterprices list    -->
+        <section class="list-box">
+
+            <div class="list-title box-2">
+                <h4>Experiencia laboral:</h4>
+            </div>
+
+            {% if woroked_for %}
+
+            <div class="list scrollbar-1-x">
+                {% for enterprice in woroked_for %}
+                
+                <div class="item">
+                    <img src="{{enterprice.logo.url}}" alt="logo {{enterprice.name}}"/>
+                    <p>{{enterprice.name}}</p>
+                </div>
+                {% endfor %}
+            </div>
+            
+            {% else %}
+            <div class="list" >
+                <div>
+                    <p>
+                        Error al cargar listado de empresas en las que e trabajado
+                    </p>
+                </div>
+
+            </div>
+            {% endif %}
+        </section>
+    </div>
+    {% endblock content %}

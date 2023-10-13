@@ -1,0 +1,13 @@
+.env
+
+my_web/*/__pycache__
+my_web/apps/*/__pycache__
+
+my_web/apps/*/migrations
+
+my_web/db.sqlite3
+
+my_web/core/env.py
+
+my_web/media/img/enterprice/
+my_web/media/img/language/

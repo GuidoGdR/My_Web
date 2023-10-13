@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:15.2
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      - POSTGRES_USER=MyWeb
+      - POSTGRES_PASSWORD=Postgres-pass
+      - POSTGRES_DB=MyWebCORE
+    volumes:
+      - ./postgre/:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4:7.0
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=user@user.com
+      - PGADMIN_DEFAULT_PASSWORD=user
+    ports:
+      - "81:80"
+    depends_on:
+      - postgres
+    volumes:
+    - ./pg_admin:/var/lib/pgadmin

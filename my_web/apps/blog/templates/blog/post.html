@@ -1,0 +1,60 @@
+{% extends 'core/base.html' %}
+    {% load static %}
+
+
+
+    {% block title %} {{object_list.title}} {% endblock title %}
+
+
+    {% block css %}
+
+    <!--    post    -->
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/post.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/post_responsive.css' %}">
+    
+    {% endblock css %}
+
+
+    {% block content %}
+
+
+    <!--    banner    -->
+    <div id="banner">
+
+        <!--
+        <img class="cyber-back" src="{% static 'my_web_app/img/cyber_back.jpeg' %}"/>
+        <img id="my_pick" src="{% static 'my_web_app/img/my_pick.jpeg' %}" />
+        -->
+
+        <h1>{{post.title}}</h1>
+        
+        
+    </div>
+
+    <div id="post" >
+
+        <section id="date_and_category">
+            
+            <p id="post_date" class="box-1">
+                Creado: {{post.date}}
+            </p>
+            
+            <article id="post_topics" class="box-1">
+                Temas: {% if post.topic.all %}
+                {% for topic in post.topic.all %}<a href="{% url 'apps.blog:blog' %}?topics={{topic.id}}">#{{topic.name}}</a> {% endfor %}
+                {% else %}Sin temas destacados{% endif %}
+            </article>
+
+        </section>
+            <article id="post_content" class="box-2">
+                
+                {{post.content | safe}}
+            </article>
+
+            <div id="return_button" class="box-1-2">
+                <a href="{% url 'apps.blog:blog' %}">
+                    Volver
+                </a>
+            </div>
+    </div>
+    {% endblock content %}

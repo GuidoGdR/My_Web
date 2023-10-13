@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %} {%endblock title %}</title>
+    <link rel="icon" type="x/icon" href="{% static 'core/img/my_logo.jpg' %}">
+    
+    <!--    CSS    -->
+
+    <!--    vars    -->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/var.css' %}">
+
+    <!--    fonts    -->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/fonts.css' %}">
+
+    <!--    general    -->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/general.css' %}">
+
+    <!--    header    -->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/header_responsive.css' %}">
+    
+    <!--    footer    -->
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/footer.css' %}">
+    
+    {% block css %}
+    {% endblock css %}
+
+</head>
+<body>
+
+    {% include "core/header.html" %}
+
+
+    
+    <!--    content    -->
+    <div id="primary_content">
+        
+        {% block content %}
+        
+        
+        
+        
+        
+        
+        {% endblock content %}
+    
+    </div>
+
+    <!--    footer    -->
+    {% include "core/footer.html" %}
+     
+<body>

@@ -1,0 +1,78 @@
+
+/*    Banner    */
+#banner{
+    
+    position: relative;
+    z-index: 1;
+
+    height: 100px;
+    width: 99%;
+    
+    background-image: var(--img-banner) ;
+    background-repeat: no-repeat;
+    
+    border: 5px solid var(--color-1);
+    
+    box-shadow: 0px 1px 0px var(--color-1), 1px 2px 0px var(--color-1), 2px 3px 0px var(--color-1), 3px 4px 0px var(--color-1);
+    
+}
+
+#banner *{
+    font-family: "1";
+}
+
+/*   banner title    */
+#banner h1{
+    
+    text-align: center;
+    
+    margin-top: 25px;
+    
+    letter-spacing: 4px;
+
+    font-size: 40px;
+    
+}
+
+/*   contact form    */
+#contact_form_container{
+    padding: 20px;
+    width: 80%;
+}
+#id_contact_mail{
+    height: 15px;
+    width: 20%;
+    
+    margin-bottom: 10px;
+}
+#id_contact_message{
+    height: 100px;
+    width: 100%;
+    
+    min-height: 100px;
+
+    margin-bottom: 10px;
+    
+    resize: vertical;
+}
+
+#send_button{
+    height: 30px;
+    width: 20%;
+}
+
+
+/*   answer    */
+#answer_ok_title{
+    margin: 50px 0px 25px 0px;
+    text-align: center;
+
+    color: var(--color-ok);
+}
+
+#answer_fail_title{
+    margin: 50px 0px 25px 0px;
+    text-align: center;
+
+    color: var(--color-fail);
+}

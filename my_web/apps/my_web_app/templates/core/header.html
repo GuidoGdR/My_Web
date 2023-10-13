@@ -1,0 +1,28 @@
+    <!--    Header    -->
+    
+    <header id="header">
+
+        <div id="logo_container">
+            <a href="{% url 'apps.my_web_app:home' %}">
+                <span id="logo_icon" class="symbol" >S</span><h3 id="logo_text">GdR</h3>
+            </a>
+        </div>
+        
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="{% url 'apps.my_web_app:home' %}">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'apps.blog:blog' %}">Blog</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'apps.contact:contact' %}">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+

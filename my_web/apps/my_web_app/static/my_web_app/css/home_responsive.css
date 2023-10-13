@@ -1,0 +1,25 @@
+@media (max-width:721px){
+
+    #my-profile #resume_and_pic{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 20px;
+    }
+    /*    Profile resume    */
+    #resume_and_pic #profile-resume{
+        
+        margin: 0px;
+        margin-top: 20px;
+    }
+    /* mi foto */
+    #resume_and_pic #my-pick{
+        margin: 0px;
+    }
+
+    /*    list box    */
+    .list-box{
+        margin: 30px auto 30px auto;
+    }
+}

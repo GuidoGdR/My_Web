@@ -1,0 +1,72 @@
+{% extends 'core/base.html' %}
+    {% load static %}
+
+
+
+    {% block title %}Contacto{% endblock title %}
+
+    {% block css %}
+
+    <!--    contact    -->
+    <link rel="stylesheet" type="text/css" href="{% static 'contact/css/contact.css' %}">
+    
+    {% endblock css %}
+
+
+    {% block content %}
+
+    
+
+    <!--    banner    -->
+    <div id="banner">
+
+        <h1>Contacto</h1>
+        
+    </div>
+    
+        <!--    contact    -->
+        <div class="box-2" id="contact_form_container">
+
+            {% if contact_form %}
+            <form class="style-1-form" method="post">
+                {% csrf_token %}
+                
+                <p>
+                    {{contact_form.contact_mail.label}}
+                    {{contact_form.contact_mail}}
+                </p>
+                
+                {{contact_form.contact_message.label}}
+                <br/>
+                {{contact_form.contact_message}}
+                <br/>
+                <button id="send_button">Enviar</button>
+            </form>
+            
+            {% elif message %}
+
+            <h3 id="answer_{{message.status}}_title">{{message.title}}</h3>
+                {% if message.mail %}
+                <br/>
+                <p>Mail de contacto espesificado: {{message.mail}}</p>
+                {% endif %}
+
+                {% if message.status == "ok" %}
+                <br/>
+                <p>Mensaje enviado:<br/>{{message.message}}</p>
+                {% else %}
+                <br/>
+                <p>Mensaje de error:</p><br/>
+                {% for line in message.message %}<p>{{line}}</p>{% endfor %}
+                {% endif %}
+            
+            {% else %}
+
+            <h3 id="answer_fail_title">Ocurrio un error inesperado!</h3>
+
+
+            
+
+            {% endif %}
+        </div>
+    {% endblock content %}

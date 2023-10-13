@@ -1,0 +1,121 @@
+{% extends 'core/base.html' %}
+    {% load static %}
+
+
+
+    {% block title %}Blog{% endblock title %}
+
+    {% block css %}
+
+    <!--    blog    -->
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/blog.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/blog_responsive.css' %}">
+    
+    {% endblock css %}
+
+
+    {% block content %}
+
+    
+
+    <!--    banner    -->
+    <div id="banner">
+
+        <!--
+        <img class="cyber-back" src="{% static 'my_web_app/img/cyber_back.jpeg' %}"/>
+        <img id="my_pick" src="{% static 'my_web_app/img/my_pick.jpeg' %}" />
+        -->
+
+        <h1>Blog</h1>
+        
+    </div>
+
+    <section id="wraper">
+
+        
+        <!--    blog box    -->
+        <div id="blog" >
+            
+            <div class="box-1 content-title">
+                <h2>Ultimos posts</h2>
+            </div>
+            
+            {% if  posts %}
+                {% for post in  posts %}
+                    <!--    Post    -->
+                    <article class="post box-2">
+                        
+                        <section class="dates_and_title">
+                            <div class="date_and_category">
+                                <span>fecha: {{post.date}}</span>
+                                <span>categorías:{% if post.topic.all %}
+                                    {% for topic in post.topic.all %} <a href="{% url 'apps.blog:blog' %}?topics={{topic.id}}">#{{topic.name}}</a>{% endfor %}
+                                    {% else %} Sin temas destacados{% endif %}</span>
+                            </div>
+                            
+                            <h3>
+                                <a href="{% if post.id %}{% url 'apps.blog:post' %}?post_id={{post.id}}{% endif %}">{{post.title}}</a>
+                            </h3>
+                        </section>
+
+                        <section class="post_content">
+                            {{post.resume | safe}}
+
+                            {% if post.id %}
+                                <a href="{% url 'apps.blog:post' %}?post_id={{post.id}}">leer mas</a>
+                            {% endif %}
+                        </section>
+
+                    </article>
+                
+                {% endfor %}
+
+                    <!--    Blog nav    -->
+                <div id="blog_nav">
+                    
+                    {% if page_obj.has_previous %}
+                        <a id="prev_pag" class="symbol" href="?page={{ page_obj.previous_page_number }}">
+                            <
+                        </a>
+                    {% endif %}
+
+                    <div id="all_pages">
+                        {% for page_num in paginator.page_range  %}
+                            
+                            <a {% if page_num == page_obj.number %}id="page_now" {% endif %}class="page_id" href="?page={{ page_num }}">
+                            {{ page_num }}
+                            </a>
+                        {% endfor %}
+                    </div>
+                    
+                    {% if page_obj.has_next %}
+                        <a id="next_pag" class="symbol" href="?page={{ page_obj.next_page_number }}">
+                            >
+                        </a>
+                    {% endif %}
+                                
+                </div>
+            {% else %}
+
+            <p>No se encontraron Posts</p>
+
+            {% endif %}
+        </div>
+
+
+        
+        <!--    serch box    -->
+        <aside id="blog_browser" class="box-2">
+            <p id="browser_title">
+                Filtrar por:
+            </p>
+            
+            
+            <form class="style-1-form" action="" method="get">
+                {{ serch_blog_form }}
+                <button>Buscar</button>
+            </form>
+        </aside>
+
+    </section>
+    {% endblock content %}
