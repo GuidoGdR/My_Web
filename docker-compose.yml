@@ -1,0 +1,24 @@
+version: "3.9"
+
+
+services:
+
+  my_web:
+    build: .
+    
+    volumes:
+      - ./my_web/db.sqlite3:/usr/src/my_web/core/db.sqlite3
+
+  nginx:
+    image: nginx:1.25.2
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./static_root/:/code/static
+
+    depends_on:
+      - my_web
+    
