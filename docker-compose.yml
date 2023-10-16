@@ -17,7 +17,7 @@ services:
 
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
-      - ./static_root/:/code/static
+      - ./static_root:/code/static
 
     depends_on:
       - my_web
