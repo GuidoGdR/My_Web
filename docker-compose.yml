@@ -7,7 +7,7 @@ services:
     build: .
     
     volumes:
-      - ./my_web/db.sqlite3:/usr/src/my_web/db.sqlite3
+      - ./my_web/sqlite:/usr/src/my_web/sqlite
 
   nginx:
     image: nginx:1.25.2
