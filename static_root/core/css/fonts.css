@@ -1,0 +1,35 @@
+
+/****   Fonts   ****/
+
+/*    TrebuchetMS    */
+@font-face {
+    font-family: "1";
+    src: url("fonts/TrebuchetMS.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*    BebasNeue    */
+@font-face {
+    font-family: "2";
+    src: url("fonts/BebasNeue.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*    WebSymbolsRegular    */
+@font-face {
+    font-family: "Symbols";
+    src: 
+        url("fonts/websymbols-regular-webfont.eot");
+    
+    src:
+        url("fonts/websymbols-regular.otf") format("otf"),
+        url("fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("fonts/websymbols-regular-webfont.woff") format("woff"),
+        url("fonts/websymbols-regular-webfont.ttf") format("truetype"),
+        url("fonts/websymbols-regular-webfont.svg#WebSymbols-regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,0 +1,141 @@
+
+/*    borrador    */
+img{
+    width: 100px;
+}
+
+/*    Banner    */
+#banner{
+    
+    position: relative;
+    z-index: 1;
+
+    height: 100px;
+    width: 100%;
+    
+    background-image: var(--img-banner) ;
+    background-repeat: no-repeat;
+    
+    border: 5px solid var(--color-1);
+    
+    box-shadow: 0px 1px 0px var(--color-1), 1px 2px 0px var(--color-1), 2px 3px 0px var(--color-1), 3px 4px 0px var(--color-1);
+
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+
+    
+    text-align: center;
+    justify-content: center;
+    
+    font-family: "1";
+}
+
+/*    my-profile    */
+#my-profile{
+    width: 95%;
+    
+}
+
+#my-profile #resume_and_pic{
+    display: flex;
+
+    justify-content: center;
+}
+
+/*    Profile resume    */
+#resume_and_pic #profile-resume{
+    
+    flex-grow: 1;
+    
+    background-color: var(--color-transp-2);
+
+    width: 65%;
+    height: 200px;
+
+    margin: 30px 20px 0px 0px;
+
+    font-size: 17px;
+    text-align: left;
+    padding: 10px;
+}
+
+
+
+/* mi foto */
+#resume_and_pic #my-pick{
+
+    flex-grow: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left:20px;
+    margin-right: 20px;
+}
+#my-pick img{
+
+    height: 150px;
+    width: 150px;
+    
+    border: 5px solid black;
+    border-radius: 100px;
+
+    object-fit: cover;
+}
+
+/*    list box    */
+.list-box{
+    width: 90%;
+    height: 175px;
+
+    margin: 50px auto 50px auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+/*    list title    */
+.list-title{
+    width: 100%;
+
+    padding: 5px;
+    text-align: left;
+    font-size: 20px;
+
+}
+/*    list box    */
+.list{
+
+    position: relative;
+    width: 90%;
+
+    background-color: var(--color-transp-2);
+    
+    display: flex;
+
+    align-items: center;
+}
+
+.item{
+    
+    margin: 10px;
+    
+    display: grid;
+    place-content: center;
+    text-align: center;
+
+}
+
+
+.item img{
+
+    height: auto;
+    width: 80px;
+
+    justify-self: center;
+}

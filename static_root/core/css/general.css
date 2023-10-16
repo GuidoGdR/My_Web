@@ -1,0 +1,173 @@
+/****   General   ****/
+
+*{
+    margin: 0px;
+    padding:  0px;
+    
+    font-family: "1";
+
+    color: var(--color-font);
+    letter-spacing: 1px;
+
+    text-shadow: var(--font-shadow);
+}
+
+body{
+    /*    bg plano o img?    */
+    background-color: var(--color-bg);
+    background-image: url("../img/bg/2.png");
+
+
+    display: flex;
+    flex-direction: column;
+    
+    min-height: 100vh;  
+}
+
+#primary_content{
+    margin: 50px var(--center-content) 100px var(--center-content);
+    
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.symbol{
+    font-family: 'symbols';
+    text-decoration: none;
+}
+/*   clear_block  */
+.clear-float{
+    float: none;
+    clear: both;
+}
+
+.box-1{
+
+    background-color: var(--color-transp-1);
+    backdrop-filter: blur( 10px );
+
+    border: 1px solid var(--color-2);
+    box-shadow: 1px 1px 3px var(--color-2), -1px -1px 5px var(--color-2);
+    
+
+}
+
+.box-2{
+    background-color: var(--color-transp-2);
+    backdrop-filter: blur( 2px );
+
+    border: 1px solid var(--color-2);
+    box-shadow: 1px 1px 3px var(--color-2), -1px -1px 5px var(--color-2);
+    
+}
+
+.box-1-2{
+
+    background-color: var(--color-transp-1);
+    backdrop-filter: blur( 2px );
+
+    border: 1px solid var(--shadow-color-2);
+    box-shadow: 1px 1px 3px var(--shadow-color-2), -1px -1px 5px var(--shadow-color-2);
+}
+
+.scrollbar-1-x{
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.scrollbar-1-x::-webkit-scrollbar {
+    width: 100%;
+    height: 13px;
+}
+.scrollbar-1-x::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 50px;
+}
+.scrollbar-1-x::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.scrollbar-1-y{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.scrollbar-1-y::-webkit-scrollbar {
+    height: 100%;
+    width: 13px;
+}
+.scrollbar-1-y::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 50px;
+}
+.scrollbar-1-y::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+/*------------------*/
+/* no implementados */
+.content-title{
+    text-align: center;
+
+    height: 40px;
+    width: 90%;
+
+    margin: 40px auto;
+
+    line-height: 40px;
+}
+
+/*   style-1-form  */
+.style-1-form{
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.style-1-form select{
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.style-1-form select::-webkit-scrollbar {
+    height: 100%;
+    width: 13px;
+}
+.style-1-form select::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 50px;
+}
+.style-1-form select::-webkit-scrollbar-track{
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.style-1-form input,
+.style-1-form select,
+.style-1-form textarea,
+.style-1-form button{
+    background-color: var(--color-transp-1);
+    backdrop-filter: blur( 10px );
+
+    border: 1px solid var(--border-forms-color);
+
+}
+.style-1-form button{
+    margin-top: 15px;
+    box-shadow: 1px 1px 2px var(--color-2), -1px -1px 2px var(--color-2);
+    background-color: var(--color-1);
+}
+/*   style-1-form hover */
+.style-1-form input:hover,
+.style-1-form select:hover,
+.style-1-form textarea:hover,
+.style-1-form button:hover{
+    border: 1px solid var(--hoover-forms-color);
+    
+    box-shadow: 1px 1px 3px var(--hoover-forms-color), -1px -1px 5px var(--hoover-forms-color);
+
+}
+

@@ -11,6 +11,3 @@ my_web/sqlite/db.sqlite3
 my_web/core/settings/env.py
 
 my_web/media/*
-
-
-static_root

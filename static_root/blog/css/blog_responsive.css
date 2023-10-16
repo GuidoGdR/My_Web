@@ -1,0 +1,12 @@
+@media (max-width:721px){
+
+    #wraper{
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+
+    #blog_browser{
+        width: 60%;
+        margin-bottom: 50px;
+    }
+}
