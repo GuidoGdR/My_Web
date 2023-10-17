@@ -21,7 +21,7 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./static_root:/code/static
       
-      - /etc/letsencrypt/ssl nginx:/etc/nginx/ssl
+      - ./nginx/ssl:/etc/nginx/ssl
     
     depends_on:
       - my_web
