@@ -1,0 +1,28 @@
+version: "3.9"
+
+
+services:
+
+  my_web:
+    build: .
+    
+    volumes:
+      - ./my_web/sqlite:/usr/src/my_web/sqlite
+
+    command: gunicorn core.wsgi:application -b 0.0.0.0:8000
+
+  nginx:
+    image: nginx:1.25.2
+
+    ports:
+      - "80:80"
+
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./static_root:/code/static
+      
+      - /etc/letsencrypt/ssl nginx:/etc/nginx/ssl
+    
+    depends_on:
+      - my_web
+    

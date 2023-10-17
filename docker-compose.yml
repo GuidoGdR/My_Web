@@ -9,17 +9,7 @@ services:
     volumes:
       - ./my_web/sqlite:/usr/src/my_web/sqlite
 
-  nginx:
-    image: nginx:1.25.2
+    command: python3 manage.py runserver 0.0.0.0:8000 --settings=core.settings.development
 
     ports:
-      - "80:80"
-
-    volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d
-      - ./static_root:/code/static
-      - /etc/letsencrypt/live/guidodorego.com nginx:/etc/nginx/ssl
-
-    depends_on:
-      - my_web
-    
+      - "8000:8000"
