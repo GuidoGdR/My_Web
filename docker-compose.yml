@@ -18,6 +18,7 @@ services:
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./static_root:/code/static
+      - /etc/letsencrypt/live/guidodorego.com nginx:/etc/nginx/ssl
 
     depends_on:
       - my_web
