@@ -25,8 +25,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = environ["SECRET_KEY"]
 
-ALLOWED_HOSTS = [ environ["ALLOWED_HOSTS"] ]
-
 # Application definition
 
 INSTALLED_APPS = [
