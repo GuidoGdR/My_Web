@@ -4,6 +4,9 @@ from core.settings.base import *
 DEBUG = False
 
 
+#https://docs.djangoproject.com/en/4.2/ref/settings/#secure-ssl-redirect
+SECURE_SSL_REDIRECT=True
+
 #COOKIE_SECURE
 #https://docs.djangoproject.com/es/4.2/ref/settings/#std-setting-CSRF_COOKIE_SECURE
 CSRF_COOKIE_SECURE = True
