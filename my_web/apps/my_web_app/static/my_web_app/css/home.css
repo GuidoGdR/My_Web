@@ -41,24 +41,41 @@ img{
 #my-profile #resume_and_pic{
     display: flex;
 
-    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
 }
 
 /*    Profile resume    */
 #resume_and_pic #profile-resume{
     
-    flex-grow: 1;
     
     background-color: var(--color-transp-2);
 
-    width: 65%;
-    height: 200px;
-
-    margin: 30px 20px 0px 0px;
+    max-width: 65%;
+    max-height: 200px;
 
     font-size: 17px;
     text-align: left;
     padding: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+#profile-resume ul{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+    list-style: disc;
+    padding-left: 20px;
 }
 
 
@@ -66,14 +83,11 @@ img{
 /* mi foto */
 #resume_and_pic #my-pick{
 
-    flex-grow: 1;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin-left:20px;
-    margin-right: 20px;
 }
 #my-pick img{
 
