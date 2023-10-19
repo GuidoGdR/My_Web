@@ -7,7 +7,10 @@ services:
     build: .
     
     volumes:
-      - ./my_web/sqlite:/usr/src/my_web/sqlite
+      - ./data/sqlite:/usr/src/app/data/sqlite
+      - ./data/media:/usr/src/app/data/media
+
+      - ./my_web:/usr/src/app/my_web
 
     command: python3 manage.py runserver 0.0.0.0:8000 --settings=core.settings.development
 

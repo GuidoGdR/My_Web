@@ -6,8 +6,8 @@ my_web/core/settings/__pycache__
 
 my_web/apps/*/migrations
 
-my_web/sqlite/db.sqlite3
+data/sqlite/db.sqlite3
 
 my_web/core/settings/env.py
 
-my_web/media/*
+data/media/*

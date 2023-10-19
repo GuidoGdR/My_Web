@@ -21,6 +21,8 @@ import core.settings.env
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 #BASE_DIR = os.path.join(__file__).resolve().parent.parent
 
+# In DATA_DIR have sqlite, media and static files
+DATA_DIR = BASE_DIR.parent.joinpath("data")
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = environ["SECRET_KEY"]
@@ -83,7 +85,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'sqlite/db.sqlite3',
+        'NAME': DATA_DIR / 'sqlite/db.sqlite3',
     }
 }
 
@@ -122,14 +124,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_ROOT = Path(BASE_DIR.parent, "static_root/")
+STATIC_ROOT = DATA_DIR.joinpath("static_root")
 
 STATIC_URL = 'static/'
 
 # Media
 # https://docs.djangoproject.com/en/4.1/ref/settings/#std-setting-MEDIA_ROOT
 
-MEDIA_ROOT = Path(BASE_DIR, "media/")
+MEDIA_ROOT = DATA_DIR.joinpath('media')
 
 MEDIA_URL = "media/"
 

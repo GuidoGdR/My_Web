@@ -7,9 +7,9 @@ services:
     build: .
     
     volumes:
-      - ./my_web/sqlite:/usr/src/my_web/sqlite
-      - ./my_web/media:/usr/src/my_web/media
-      - ./logs/my_web:/usr/src/my_web/logs
+      - ./data/sqlite:/usr/src/app/data/sqlite
+      - ./data/media:/usr/src/app/data/media
+      - ./logs/my_web:/usr/src/app/data/logs
 
     command: gunicorn core.wsgi:application -b 0.0.0.0:8000 --log-level=INFO --log-file=/usr/src/my_web/logs/my_web.log
 
@@ -22,8 +22,8 @@ services:
 
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
-      - ./static_root:/code/static
-      - ./my_web/media:/code/media
+      - ./data/static_root:/code/static
+      - ./data/media:/code/media
       
       - ./nginx/ssl:/etc/nginx/ssl
     
