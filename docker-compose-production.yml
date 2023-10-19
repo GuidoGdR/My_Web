@@ -11,7 +11,7 @@ services:
       - ./my_web/media:/usr/src/my_web/media
       - ./logs/my_web:/usr/src/my_web/logs
 
-    command: gunicorn core.wsgi:application -b 0.0.0.0:8000 --log-file=/usr/src/my_web/logs/my_web.log
+    command: gunicorn core.wsgi:application -b 0.0.0.0:8000 --log-level=INFO --log-file=/usr/src/my_web/logs/my_web.log
 
   nginx:
     image: nginx:1.25.2
