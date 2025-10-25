@@ -34,11 +34,22 @@
     
 }
 
-/*   contact form    */
-#contact_form_container{
+#contact_container{
     padding: 20px;
     width: 80%;
 }
+.contrast_text{
+    background-color: var(--color-transp-2);
+    padding: 5px;
+}
+.info_style{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*   contact form    */
 #id_contact_mail{
     height: 15px;
     width: 20%;
@@ -75,4 +86,9 @@
     text-align: center;
 
     color: var(--color-fail);
+}
+@media (min-width:450px){
+    #banner {
+        background-size: 100%;
+    }
 }

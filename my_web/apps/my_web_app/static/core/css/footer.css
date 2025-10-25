@@ -1,9 +1,9 @@
 
 footer{    
     background: linear-gradient(to top, var(--color-1) 33%, var(--color-1-0) 100%);
-    box-shadow: 0px -20px 25px var(--color-1-0);
+    box-shadow: 0px -40px 0px var(--color-1-0);
     
     letter-spacing: 1px;
 
-    height: 125px;
+    height: 50px;
 }

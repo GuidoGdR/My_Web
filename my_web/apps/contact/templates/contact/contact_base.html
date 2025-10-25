@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+    {% load static %}
+
+
+
+    {% block title %}Contacto{% endblock title %}
+
+    {% block css %}
+
+    <!--    contact    -->
+    <link rel="stylesheet" type="text/css" href="{% static 'contact/css/contact.css' %}">
+    
+    {% endblock css %}
+
+
+    {% block content %}
+
+    
+
+    <!--    banner    -->
+    <div id="banner">
+
+        <h1>Contacto</h1>
+        
+    </div>
+    
+    <div class="box-2" id="contact_container">
+
+        {% block core %}
+
+        {% endblock core %}
+            
+    </div>
+    {% endblock content %}
+

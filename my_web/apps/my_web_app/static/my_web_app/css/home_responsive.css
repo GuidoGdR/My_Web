@@ -23,3 +23,8 @@
         margin: 30px auto 30px auto;
     }
 }
+@media (min-width:450px){
+    #banner {
+        background-size: 100%;
+    }
+}

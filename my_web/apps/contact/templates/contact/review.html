@@ -1,0 +1,25 @@
+{% extends 'contact/contact_base.html' %}
+
+{% block core %}
+
+    <h3 id="answer_{{message.status}}_title">{{message.title}}</h3>
+
+    <section  class="info_style contrast_text">
+    {% if message.message %}
+        <p>{{message.message}}</p>
+        {% endif %}
+        
+        {% if message.user_mail %}
+        <p>Mail de contacto espesificado: <span class="contrast_text">{{message.user_mail}}</span></p>
+        
+        
+        {% endif %}
+        
+        {% if message.user_message %}
+        <p>Mensaje espesificado: <span class="contrast_text">{{message.user_message}}</span></p>
+
+        {% endif %}
+    </section>
+
+{% endblock core %}
+

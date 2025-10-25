@@ -7,3 +7,8 @@
         font-size: 25px;
     }
 }
+@media (min-width:450px){
+    #banner {
+        background-size: 100%;
+    }
+}

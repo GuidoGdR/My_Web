@@ -70,12 +70,14 @@ img{
 #profile-resume ul{
     
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 20px;
 
 
-    list-style: disc;
-    padding-left: 20px;
+    list-style: none;
+}
+#profile-resume ul a:hover{
+    text-shadow: 1px 1px 5px var(--color-2);
 }
 
 

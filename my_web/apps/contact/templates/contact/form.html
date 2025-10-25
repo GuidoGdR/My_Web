@@ -1,0 +1,25 @@
+{% extends 'contact/contact_base.html' %}
+
+{% block core %}
+
+<form class="style-1-form" method="post">
+    {% csrf_token %}
+    
+    <p>
+        {{contact_form.contact_mail.label}}
+        {{contact_form.contact_mail}}
+    </p>
+    
+    {{contact_form.contact_message.label}}
+    <br/>
+    {{contact_form.contact_message}}
+    <br/>
+    <div class="cf-turnstile" data-sitekey="0x4AAAAAAAeP5Nmwp6cM1gHX" data-callback="javascriptCallback"></div>
+    <button id="send_button">Enviar</button>
+</form>
+
+{% endblock core %} 
+
+{% block js %}
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
+{% endblock js %}
