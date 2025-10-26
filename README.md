@@ -11,27 +11,25 @@ Si acabas de clonar o descargar el proyecto, sigue estos pasos para configurarlo
 ### 1️⃣ Crear entorno virtual (recomendado)
 ```bash
 python -m venv .env
-2️⃣ Activar entorno virtual
+```
+#### Activar entorno virtual
 En Windows:
-
-bash
-Copiar código
+```bash
 .env\Scripts\activate
+```
 En Linux / macOS:
-
-bash
-Copiar código
+```bash
 source .env/bin/activate
-3️⃣ Instalar dependencias
-bash
-Copiar código
+```
+### 2️⃣ Instalar dependencias
+```bash
 pip install -r requirements.txt
-⚙️ Configuración de entorno
+```
+### 3️⃣ Configuración de entorno
 El archivo de configuración se encuentra en:
-
-bash
-Copiar código
+```bash
 my_web/core/settings/env.py
+```
 Este archivo contiene claves sensibles (como contraseñas, claves de API, correos, etc.).
 
 ⚠️ Importante: No utilices las mismas claves que vienen de ejemplo en el repositorio.
@@ -43,28 +41,29 @@ En este archivo también podrás configurar:
 
 🔑 Las claves Turnstile (de Cloudflare) que se usan para evitar spam y verificar que los usuarios no son bots.
 
-🗄️ Migraciones de base de datos
+### 4️⃣ Migraciones de base de datos
 Ejecuta las siguientes órdenes para crear y aplicar las migraciones:
 
-bash
-Copiar código
+```bash
 my_web\manage.py makemigrations blog my_web_app
 my_web\manage.py migrate
-👤 Crear usuario administrador
-bash
-Copiar código
+```
+### 5️⃣ Crear usuario administrador
+```bash
 my_web\manage.py createsuperuser
-🚀 Modos de ejecución
-🧪 Modo desarrollo
-Asegúrate de tener Docker Desktop ejecutándose.
+```
+🚀 Modos de ejecución:
 
-bash
-Copiar código
+🧪 Modo desarrollo
+(Asegúrate de tener Docker Desktop ejecutándose.)
+```bash]
 docker-compose up
+```
 🏗️ Modo producción
-bash
-Copiar código
+```bash
 docker-compose -f docker-compose-production.yml up
+```
+
 📰 Características principales
 ✅ Blog dinámico:
 Crea y edita publicaciones fácilmente con django-ckeditor para mayor personalización.
