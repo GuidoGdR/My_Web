@@ -8,6 +8,5 @@ my_web/apps/*/migrations
 
 data/sqlite/db.sqlite3
 
-my_web/core/settings/env.py
 
 data/media/*
