@@ -56,7 +56,7 @@ my_web\manage.py createsuperuser
 
 🧪 Modo desarrollo
 (Asegúrate de tener Docker Desktop ejecutándose.)
-```bash]
+```bash
 docker-compose up
 ```
 🏗️ Modo producción
